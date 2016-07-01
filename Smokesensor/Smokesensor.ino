@@ -5,7 +5,7 @@ SoftwareSerial mySerial(9,10);
 // Variable Setup
 int ledPin = 8;
 int smokePin=A0;  //the analog pin connected to the smoke sensor's output
-#define SMOKEMAX=400;
+#define SMOKEMAX 400
 //////////////////////////
 //SETUP
 
@@ -18,6 +18,7 @@ void setup() {
   pinMode(ledPin, OUTPUT);
 Serial.println("SENSOR ACTIVE");
 }
+
 
 //////////////////////////
 //LOOP
@@ -40,6 +41,7 @@ void loop() {
     }
     delay(50000);
 }
+}
 void SendMessage1()
   {
     if(Serial.available()>0)
@@ -61,7 +63,7 @@ void SendMessage1()
  }
  
   }
-  void SendMessage2()
+    void SendMessage2()
   {
     if(Serial.available()>0)
      {
@@ -80,5 +82,3 @@ void SendMessage1()
   mySerial.println((char)26);
   delay(1000);
    }
-  }
-
